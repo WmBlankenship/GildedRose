@@ -7,11 +7,6 @@ namespace GildedRose.Console
         UpdateStrategyFactory _strategyFactory = new UpdateStrategyFactory();
         IList<Item> Items;
 
-        public Program()
-        {
-
-        }
-
         public Program(IList<Item> items)
         {
             this.Items = items;
@@ -21,19 +16,29 @@ namespace GildedRose.Console
         {
             System.Console.WriteLine("OMGHAI!");
 
-            //var app = new Program(new List<Item>
-            //            {
-            //                new Item
-            //                { 
-            //                    Name = "Aged Brie", 
-            //                    SellIn = 10, 
-            //                    Quality = 10
-            //                }
-            //            });
-            //app.UpdateQuality();
+            var itemsList = new List<Item>
+            {
+                new Item
+                {
+                    Name = "Aged Brie",
+                    SellIn = 10,
+                    Quality = 10
+                },
+                new Item
+                {
+                    Name = "Conjured Item",
+                    SellIn = 1,
+                    Quality = 2
+                },
+                new Item
+                {
+                    Name = "Foo Item",
+                    SellIn = 1,
+                    Quality = 2
+                }
+            };
 
             System.Console.ReadKey();
-
         }
 
         public void UpdateQuality()
